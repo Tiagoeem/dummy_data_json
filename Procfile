@@ -1,1 +1,1 @@
-web: sanic app:app
+web: sanic app:app 8000
