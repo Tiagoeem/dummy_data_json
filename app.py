@@ -5,7 +5,9 @@ import os
 app = Sanic(__name__)
 
 @app.get("/")
-async def root_path(request):
-    return json({"message": "API está em execução."})
+async def handler(request):
+    return json({"info": "API em execução."})
 
-app.run(host="0.0.0.0", port=7777, debug=True, access_log=False, fast=True)
+cpus_count = os.cpu_count()
+workers = cpus_count * 2 + 1
+app.run(host="0.0.0.0", port=7777, debug=True, access_log=False, workers=workers)
