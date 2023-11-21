@@ -7,3 +7,4 @@ sanic-routing==23.6.0
 tracerite==1.1.1
 typing_extensions==4.8.0
 websockets==12.0
+uvicorn

@@ -1,1 +1,1 @@
-web: sanic app:app 8000
+web: uvicorn app:app
