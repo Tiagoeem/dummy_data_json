@@ -10,4 +10,4 @@ async def handler(request):
 
 cpus_count = os.cpu_count()
 workers = cpus_count * 2 + 1
-app.run(host="0.0.0.0", port=7777, debug=True, access_log=False, workers=workers)
+app.run(host="0.0.0.0", port=7777, debug=True, access_log=False, single_process=True)#workers=workers)
